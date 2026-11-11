@@ -1,5 +1,5 @@
 import 'Vehicle.dart';
-
+import 'User.dart';
 
 class Patinet extends Vehicle {
   final int velocitatMax;

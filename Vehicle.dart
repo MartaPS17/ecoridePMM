@@ -1,3 +1,6 @@
+import 'User.dart';
+import 'GpsLocation.dart';
+
 abstract class Vehicle with GpsLocation{
   final String id;
   final int bateriaPercentatge;
@@ -11,11 +14,15 @@ abstract class Vehicle with GpsLocation{
     this.enUs = false, 
     });
 
+    String estatBateria(){
+      return switch (bateriaPercentatge){
+        >= 80 => "Alta",
+        >= 20 => "Mitjana",
+        _=> "Crítica (Requereix càrrega)",
+      };
+    }
+  //metode abstracte calcular cost reserva
     double calcularCostReservat(int minuts, {User? usuari});
-
-
-    
-
     }
 
 

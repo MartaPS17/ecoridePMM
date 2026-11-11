@@ -1,4 +1,4 @@
-impor '../models/User.dart';
+
 
 mixin GpsLocation {
   double latitud = 0.0;
