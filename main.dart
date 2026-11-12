@@ -75,6 +75,33 @@ void main(){
     gestor.afegirVehicle(cotxeA);
     gestor.afegirVehicle(cotxeB);
 
+    //simulació d'ús
 
+    User usuari1 = User(
+      id: "USR-01",
+      nomComplet: 'Jackie Taylor',
+      saldo: 120.00,
+      correu: 'jackieTaylor9@gmail.com',
+      esVIP: true,
+    );
+
+    int minutsReserva = 30;
+    double costTotal = patinetA.calcularCostReservat(minutsReserva, usuari: usuari1);
+    patinetA.actualitzarUbicacio(23.4,3.4);
+    var(latitud,longitud) = patinetA.obtenirCoordenades();
+
+
+    print("Usuari: ${usuari1.nomComplet}");
+    print("Vehicle: Patinet amb codi ${patinetA.id}");
+    print("Temps llogat: $minutsReserva minuts");
+    print("Cost total: ${costTotal.toStringAsFixed(2)}");
+    print("Coordinades actuals: Latitud $latitud, || Longitud: $longitud");
+
+    //gestió error
+    try{
+  user1.recarregarSaldo(-10.0);
+} on ArgumentError catch (e){
+  print('Paràmetes no vàlid.');
+}
 
 }

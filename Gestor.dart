@@ -1,5 +1,5 @@
 import 'Vehicle.dart';
-import 'Cotxe.dart';
+
 
 
 
@@ -18,4 +18,7 @@ List<Vehicle> sublistaDispoBateria() {
   return _flota.where((v) => v.bateriaPercentatge > 20 && !v.enUs).toList();
   
 }
+
+
+
 }
