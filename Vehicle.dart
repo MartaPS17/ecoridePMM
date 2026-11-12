@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'User.dart';
 import 'GpsLocation.dart';
 
@@ -23,12 +25,5 @@ abstract class Vehicle with GpsLocation{
     }
   //metode abstracte calcular cost reserva
     double calcularCostReservat(int minuts, {User? usuari});
-    }
 
-
-    
-  
-
-
-
-
+}
